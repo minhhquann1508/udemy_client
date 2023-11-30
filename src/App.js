@@ -1,56 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { path } from './utils/path';
+import { Public, Course, Courses, Home, Login, Register } from './pages/Public';
+import { useDispatch } from 'react-redux';
+import { getCourseCategoriesAction } from './store/actions/categories';
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCourseCategoriesAction())
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className="min-h-screen overflow-y-auto font-main">
+      <Routes>
+        <Route path={path.public} element={<Public />}>
+          <Route path={path.home} element={<Home />} />
+          <Route path={path.course} element={<Course />} />
+          <Route path={path.courses} element={<Courses />} />
+          <Route path={path.login} element={<Login />} />
+          <Route path={path.register} element={<Register />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

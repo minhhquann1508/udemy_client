@@ -1,0 +1,14 @@
+export { default as Header } from './Header';
+export { default as Footer } from './Footer';
+export { default as CourseItem } from './CourseItem';
+export { default as ListCourses } from './ListCourses';
+export { default as Categories } from './Categories';
+export { default as SearchBox } from './SearchBox';
+export { default as Button } from './Button';
+export { default as Carousel } from './Carousel';
+export { default as Brands } from './Brands';
+export { default as ListReview } from './ListReview';
+export { default as ReviewItem } from './ReviewItem';
+export { default as Teaching } from './Teaching';
+export { default as Price } from './Price';
+export { default as Rating } from './Rating';

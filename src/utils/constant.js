@@ -1,0 +1,1 @@
+export const DOMAIN = 'https://udemy-hm6i.onrender.com/api/v1';
