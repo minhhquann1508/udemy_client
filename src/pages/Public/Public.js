@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import { Header, Footer } from '../../components'
 
 function Public() {
+
     return (
         <div>
             <Header />

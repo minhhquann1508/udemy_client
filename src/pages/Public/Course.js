@@ -21,6 +21,16 @@ function Course() {
         fetchCourse();
     }, [courseId]);
 
+    const renderReviews = () => {
+        if (course && course.reviews.length > 0) {
+            return course.reviews.map((review, index) => (
+                <Rating key={index} ratingData={review} />
+            ))
+        } else {
+            return <div className='text-[15px]'>There are no reviews yet</div>
+        }
+    }
+
     return (
         <>
             <div className='w-full h-fit flex justify-center bg-main-black py-10'>
@@ -83,9 +93,7 @@ function Course() {
                     <div className='xl:w-[65%] pt-8'>
                         <h1 className='font-extrabold text-[22px] mb-5 flex items-center gap-3'><span><icons.IoStar color='orange' /></span> <span>{course?.averangeRating.toFixed(1)} course rating,{course?.numberOfReviews} ratings</span></h1>
                         <div className='grid grid-cols-2 gap-5 py-5'>
-                            {course?.reviews.map((review) => (
-                                <Rating ratingData={review} />
-                            ))}
+                            {renderReviews()}
                         </div>
                     </div>
                 </div>

@@ -12,3 +12,6 @@ export { default as ReviewItem } from './ReviewItem';
 export { default as Teaching } from './Teaching';
 export { default as Price } from './Price';
 export { default as Rating } from './Rating';
+export { default as UpdateAvatar } from './UpdateAvatar';
+export { default as TeacherCourse } from './TeacherCourse';
+export { default as NavBar } from './NavBar';

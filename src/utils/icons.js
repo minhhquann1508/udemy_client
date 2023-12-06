@@ -16,9 +16,27 @@ import { CiFileOn } from "react-icons/ci";
 import { IoMdDownload } from "react-icons/io";
 import { FaMobileAlt } from "react-icons/fa";
 import { GrAchievement } from "react-icons/gr";
+import { FaPlusCircle } from "react-icons/fa";
+import { FaKey } from "react-icons/fa";
+import { ImExit } from "react-icons/im";
+import { FaDiscourse } from "react-icons/fa";
+import { MdOutlineComment } from "react-icons/md";
+import { RiDashboardFill } from "react-icons/ri";
+import { BiCategory } from "react-icons/bi";
+import { FaTrash } from "react-icons/fa6";
+import { FaRegEdit } from "react-icons/fa";
 
 const icons = {
     FaRegNoteSticky,
+    FaTrash,
+    FaRegEdit,
+    BiCategory,
+    RiDashboardFill,
+    MdOutlineComment,
+    FaKey,
+    ImExit,
+    FaDiscourse,
+    FaPlusCircle,
     CiFileOn,
     IoMdDownload,
     FaMobileAlt,

@@ -43,3 +43,21 @@
 .react-player > div {
     position: absolute; 
 }
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-layout .ant-layout-sider {
+    background: #2d2f31;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-menu-light .ant-menu-item-selected {
+    background-color:transparent;
+    color: #a435f0;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover {
+    background: rgb(77, 76, 76);
+    color: #ffffff;
+}
+
+.ant-menu-item {
+    border-radius: none;
+}

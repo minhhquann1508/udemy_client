@@ -56,7 +56,7 @@ function Register() {
                             placeholder='Herry Larsson'
                             className='text-[15px] px-3 focus:outline-main-purple border border-[#000] py-4'
                             type="text" />
-                        <p className={`${(formik.errors && formik.errors.fullname) ? 'block text-red-500 text-[13px]' : 'hidden'}`}>{formik.errors.fullname}</p>
+                        <p className={`${(formik.errors && formik.touched.fullname) ? 'block text-red-500 text-[13px]' : 'hidden'}`}>{formik.errors.fullname}</p>
                     </div>
                     <div className='flex flex-col gap-2'>
                         <label className='font-semibold text-[14px]'>Email</label>
@@ -68,7 +68,7 @@ function Register() {
                             className='text-[15px] px-3 focus:outline-main-purple border border-[#000] py-4'
                             type="text"
                         />
-                        <p className={`${(formik.errors && formik.errors.email) ? 'block text-red-500 text-[13px]' : 'hidden'}`}>{formik.errors.email}</p>
+                        <p className={`${(formik.errors && formik.touched.email) ? 'block text-red-500 text-[13px]' : 'hidden'}`}>{formik.errors.email}</p>
                     </div>
                     <div className='flex flex-col gap-2'>
                         <label className='font-semibold text-[14px]'>Phone number</label>
@@ -80,7 +80,7 @@ function Register() {
                             className='text-[15px] px-3 focus:outline-main-purple border border-[#000] py-4'
                             type="text"
                         />
-                        <p className={`${(formik.errors && formik.errors.phone) ? 'block text-red-500 text-[13px]' : 'hidden'}`}>{formik.errors.phone}</p>
+                        <p className={`${(formik.errors && formik.touched.phone) ? 'block text-red-500 text-[13px]' : 'hidden'}`}>{formik.errors.phone}</p>
                     </div>
                     <div className='flex flex-col gap-2 pb-2'>
                         <label className='font-semibold text-[14px]'>Password</label>
@@ -91,7 +91,7 @@ function Register() {
                             placeholder='Enter your password'
                             className='text-[15px] px-3 focus:outline-main-purple border border-[#000] py-4'
                             type="password" />
-                        <p className={`${(formik.errors && formik.errors.password) ? 'block text-red-500 text-[13px]' : 'hidden'}`}>{formik.errors.password}</p>
+                        <p className={`${(formik.errors && formik.touched.password) ? 'block text-red-500 text-[13px]' : 'hidden'}`}>{formik.errors.password}</p>
                     </div>
                     <button type='submit' className={`
                     font-bold hover:scale-105 duration-200 

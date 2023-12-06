@@ -7,6 +7,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { getListReviews } from '../apis/review';
 import { ReviewItem } from '../components'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 function ListReview() {
     const [lstReview, setLstReview] = useState(null);
@@ -32,9 +34,12 @@ function ListReview() {
                 </SwiperSlide>
             ))
         } else {
-            return new Array(10).fill(null).map((el, index) => (
-                <SwiperSlide key={index}>
-                    <div>Loading...</div>
+            return new Array(5).fill(null).map((el, i) => (
+                <SwiperSlide key={i}>
+                    <Skeleton className='h-[200px] mb-3' />
+                    {new Array(5).fill(null).map((el, index) => (
+                        <Skeleton key={index} />
+                    ))}
                 </SwiperSlide>
             ))
         }

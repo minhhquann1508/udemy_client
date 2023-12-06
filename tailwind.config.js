@@ -31,7 +31,8 @@ module.exports = {
       backgroundColor: {
         'main-black': '#2d2f31',
         'main-purple': '#5624d0',
-        'main-gray': '#f7f9fa'
+        'main-gray': '#f7f9fa',
+        'sub-purple': '#a435f0'
       },
       colors: {
         'main-black': '#2d2f31',

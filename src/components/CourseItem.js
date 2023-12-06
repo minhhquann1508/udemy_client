@@ -27,7 +27,7 @@ function CourseItem({ courseData }) {
                 absolute bg-[#ffffff] flex flex-col gap-2 w-full h-full border shadow-md p-5`
                 }
             >
-                <h3 className='font-bold line-clamp-3'>{courseData?.title}</h3>
+                <h3 className='font-bold line-clamp-2 lg:line-clamp-3'>{courseData?.title}</h3>
                 <div className='text-[13px] flex gap-2 items-center'>
                     <span
                         className={`bg-[#eceb98] font-semibold text-[12px] py-1 px-2 ${courseData?.numberOfViews > 100000 ? '' : 'hidden'}`}
@@ -40,8 +40,8 @@ function CourseItem({ courseData }) {
                     <span>All levels</span>
                     <span>Subtitle</span>
                 </div>
-                <p className='text-[13px] mb-2 line-clamp-4'>{courseData?.desc}</p>
-                <div className='w-full flex justify-center gap-3'>
+                <p className='text-[13px] mb-2 line-clamp-3 lg:line-clamp-4'>{courseData?.desc}</p>
+                <div className='w-full flex justify-center flex-col lg:flex-row gap-3'>
                     <Button
                         textColor={'#ffffff'}
                         content={'Add to cart'}
@@ -59,7 +59,7 @@ function CourseItem({ courseData }) {
             </div>
             {/* Phần thumbnail */}
             <div className='border mb-2'>
-                <img className='w-full object-contain' src={courseData?.thumbnail || notFoundCourse} alt={courseData?.title} />
+                <img className='w-full h-[150px] object-cover' src={courseData?.thumbnail || notFoundCourse} alt={courseData?.title} />
             </div>
             {/* Phần thông tin cơ bản khóa học */}
             <div>

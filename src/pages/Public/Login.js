@@ -34,7 +34,7 @@ function Login() {
                             className='text-[15px] px-3 focus:outline-main-purple border border-[#000] py-4'
                             type="text"
                         />
-                        <p className={`${(formik.errors && formik.errors.email) ? 'block text-red-500 text-[13px]' : 'hidden'}`}>{formik.errors.email}</p>
+                        <p className={`${(formik.errors && formik.touched.email) ? 'block text-red-500 text-[13px]' : 'hidden'}`}>{formik.errors.email}</p>
                     </div>
                     <div className='flex flex-col gap-2 pb-2'>
                         <label className='font-semibold text-[14px]'>Password</label>
@@ -46,7 +46,7 @@ function Login() {
                             onBlur={formik.handleBlur}
                             name='password'
                         />
-                        <p className={`${(formik.errors && formik.errors.password) ? 'block text-red-500 text-[13px]' : 'hidden'}`}>{formik.errors.password}</p>
+                        <p className={`${(formik.errors && formik.touched.password) ? 'block text-red-500 text-[13px]' : 'hidden'}`}>{formik.errors.password}</p>
                     </div>
                     <button type='submit' className={`
                     font-bold hover:scale-105 duration-200 

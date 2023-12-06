@@ -20,7 +20,7 @@ const productCategorySlice = createSlice({
 
         builder.addCase(getCourseCategoriesAction.rejected, (state, action) => {
             state.isLoading = false;
-            state.errorMessage = action.payload.response.data.msg;
+            state.errorMessage = action.payload.response?.data.msg;
         });
     },
 });

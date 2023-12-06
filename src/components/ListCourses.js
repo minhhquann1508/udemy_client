@@ -7,6 +7,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { CourseItem } from '../components'
 import { getAllCourseApi } from '../apis/course'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 function ListCourses({ sort }) {
     const [listCourses, setListCourse] = useState(null);
@@ -32,9 +34,12 @@ function ListCourses({ sort }) {
                 </SwiperSlide>
             ))
         } else {
-            return new Array(10).fill(null).map((el, index) => (
-                <SwiperSlide key={index}>
-                    <div>Loading...</div>
+            return new Array(5).fill(null).map((el, i) => (
+                <SwiperSlide key={i}>
+                    <Skeleton className='h-[200px] mb-3' />
+                    {new Array(5).fill(null).map((el, index) => (
+                        <Skeleton key={index} />
+                    ))}
                 </SwiperSlide>
             ))
         }
@@ -49,6 +54,9 @@ function ListCourses({ sort }) {
             navigation
             breakpoints={{
                 0: {
+                    slidesPerView: 1
+                },
+                500: {
                     slidesPerView: 2
                 },
                 768: {

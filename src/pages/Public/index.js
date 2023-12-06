@@ -4,3 +4,8 @@ export { default as Course } from './Course';
 export { default as Courses } from './Courses';
 export { default as Login } from './Login';
 export { default as Register } from './Register';
+export { default as Profile } from './Profile';
+export { default as Info } from './Info';
+export { default as NotFound } from './NotFound';
+export { default as About } from './About';
+export { default as Search } from './Search';
